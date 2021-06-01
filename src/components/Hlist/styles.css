@@ -1,0 +1,17 @@
+.scrolling-wrapper {
+  width: 50%;
+  border: 1px solid #ddd;
+  display: flex;
+  overflow: auto;
+}
+
+.scrolling-wrapper::-webkit-scrollbar {
+  width: 0;
+}
+
+.scrolling-wrapper .item {
+  line-height: 110px;
+  text-align: center;
+  background-color: #ddd;
+  margin-right: 2px;
+}
