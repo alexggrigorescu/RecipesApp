@@ -1,17 +1,20 @@
 .card-wrapper {
   width: 15rem;
+  min-height: 30rem;
+  max-height: 30rem;
   padding: 20px;
   margin: 10px;
   border-radius: 25px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   background-color: rgb(255, 255, 255);
+  padding-bottom: 5rem;
 }
 
 .body-text {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 10; /* number of lines to show */
+  -webkit-line-clamp: 8; /* number of lines to show */
   -webkit-box-orient: vertical;
 }
 
@@ -20,4 +23,9 @@
   height: 10rem;
   border-radius: 25px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.card-wrapper .recipe-button {
+  position: absolute;
+  bottom: 2rem;
 }

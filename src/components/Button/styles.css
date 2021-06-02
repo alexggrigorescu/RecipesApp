@@ -1,0 +1,16 @@
+.button {
+  font-family: "Hoefler Text", Georgia, "Times New Roman", serif;
+  background: #46360b;
+  border: 1px solid;
+  border-color: #4e3417;
+  border-radius: 2rem;
+  padding: 0.3rem;
+  box-sizing: border-box;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #2e2603;
+}

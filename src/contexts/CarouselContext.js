@@ -1,0 +1,40 @@
+import React, { useState, useContext } from "react";
+
+export const CarouselContext = React.createContext();
+
+export function useCarousel() {
+  return useContext(CarouselContext);
+}
+
+export function CarouselProvider({ children }) {
+  const APP_ID = "4e26749c";
+  const APP_KEY = "a6e7bc7515cc4ef974fc8fcd4bee8121";
+
+  const [recipes, setRecipes] = useState([]);
+
+  // const getRecipes = async () => {
+  //   const response = await fetch(
+  //     `https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}`
+  //   );
+  //   const data = await response.json();
+  //   setRecipes(data);
+  //   console.log(recipes);
+
+  const getRecipes = () =>
+    fetch(
+      `https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}`
+    )
+      .then((response) => response.json())
+      .then((data) => setRecipes(data));
+
+  const value = {
+    recipes,
+    getRecipes,
+  };
+
+  return (
+    <CarouselContext.Provider value={value}>
+      {children}
+    </CarouselContext.Provider>
+  );
+}
