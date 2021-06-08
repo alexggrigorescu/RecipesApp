@@ -7,8 +7,8 @@ import { CarouselProvider } from "./contexts/CarouselContext";
 function App() {
   return (
     <div className="App">
-      <Header />
       <CarouselProvider>
+        <Header />
         <Landing />
       </CarouselProvider>
     </div>

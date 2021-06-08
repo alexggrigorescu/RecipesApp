@@ -2,12 +2,12 @@ import React from "react";
 
 import "./styles.css";
 
-import SearchField from "../SearchField";
+import Search from "../Search";
 
 export default function Header() {
   return (
     <header>
-      <SearchField />
+      <Search />
     </header>
   );
 }
