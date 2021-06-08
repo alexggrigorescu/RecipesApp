@@ -1,29 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./styles.css";
 
-import { useCarousel } from "../../contexts/CarouselContext";
-import { CarouselProvider } from "../../contexts/CarouselContext";
 import HList from "../../components/Hlist";
+import RecipeDetails from "../../components/RecipeDetails";
 
-export default function Landing() {
-  const APP_ID = "4e26749c";
-  const APP_KEY = "a6e7bc7515cc4ef974fc8fcd4bee8121";
+import { useCarousel } from "../../contexts/CarouselContext";
 
-  const [recipes, setRecipes] = useState([]);
-
-  const getRecipes = async () => {
-    const response = await fetch(
-      `https://api.edamam.com/search?q=soup&app_id=${APP_ID}&app_key=${APP_KEY}`
-    );
-    const data = await response.json();
-    setRecipes(data.hits);
-    console.log(data.hits);
-  };
+export default function Landing({ showDetails }) {
+  const { recipes, getRecipes } = useCarousel();
 
   useEffect(() => {
     getRecipes();
-    console.log("effect called");
+    console.log("effect called with function getRecipes");
   }, []);
 
-  return <HList recipes={recipes} />;
+  return (
+    <>
+      <HList recipes={recipes} />
+      <RecipeDetails />
+    </>
+  );
 }

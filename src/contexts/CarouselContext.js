@@ -12,20 +12,12 @@ export function CarouselProvider({ children }) {
 
   const [recipes, setRecipes] = useState([]);
 
-  // const getRecipes = async () => {
-  //   const response = await fetch(
-  //     `https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}`
-  //   );
-  //   const data = await response.json();
-  //   setRecipes(data);
-  //   console.log(recipes);
-
   const getRecipes = () =>
     fetch(
       `https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}`
     )
       .then((response) => response.json())
-      .then((data) => setRecipes(data));
+      .then((data) => setRecipes(data.hits));
 
   const value = {
     recipes,
