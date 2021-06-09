@@ -12,7 +12,6 @@ export default function Landing({ showDetails }) {
 
   useEffect(() => {
     getRecipes();
-    console.log("effect called with function getRecipes");
   }, []);
 
   return (

@@ -4,8 +4,6 @@ import "./styles.css";
 import { useDetails } from "../../contexts/DetailsContext";
 
 export default function RecipeDetails() {
-  console.log("recipe details LOG");
-
   const { recipe } = useDetails();
 
   const totalTime = () => {
