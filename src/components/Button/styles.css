@@ -1,10 +1,10 @@
 .button {
   font-family: "Hoefler Text", Georgia, "Times New Roman", serif;
-  background: #46360b;
+  background: rgb(102, 89, 66);
   border: 1px solid;
-  border-color: #4e3417;
+  border-color: rgb(126, 121, 110);
   border-radius: 2rem;
-  padding: 0.3rem;
+  padding: 0.5rem;
   box-sizing: border-box;
   font-size: 1rem;
   color: white;
@@ -12,5 +12,5 @@
 }
 
 .button:hover {
-  background: #2e2603;
+  background: rgba(162, 155, 141, 1);
 }

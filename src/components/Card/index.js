@@ -11,7 +11,17 @@ export default function Card({ id, title, image, ingredients, ...recipe }) {
   const { setRecipe } = useDetails();
 
   const onClick = () => {
-    showDetails ? setRecipe(recipe) : setShowDetails(true);
+    setRecipe(recipe);
+
+    setTimeout(
+      () =>
+        window.scrollBy({
+          top: 900,
+          left: 0,
+          behavior: "smooth",
+        }),
+      200
+    );
   };
 
   return (

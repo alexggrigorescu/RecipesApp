@@ -1,0 +1,56 @@
+/*-------------------*/
+
+.searchBox {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  transform: translate(20%, 20%);
+  background: rgb(189, 176, 152);
+  height: 40px;
+  border-radius: 40px;
+  padding: 10px;
+  margin: 25px 25px;
+}
+
+.searchBox:hover > .searchInput {
+  width: 240px;
+  padding: 0 6px;
+}
+
+.searchBox:hover > .searchButton {
+  background: rgb(102, 89, 66);
+  color: white;
+}
+
+.searchButton {
+  color: white;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgb(102, 89, 66);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+
+.searchInput {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0px;
+}
+
+@media screen {
+  .searchBox:hover > .searchInput {
+    width: 150px;
+    padding: 0 6px;
+  }
+}

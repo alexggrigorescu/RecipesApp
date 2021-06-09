@@ -1,3 +1,69 @@
-#text {
-  margin-top: 100px;
+@import url("https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap");
+
+#recipe-title {
+  font-size: 50px;
+  letter-spacing: 10px;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em rgb(194, 141, 81),
+    0 0 0.2em rgb(134, 92, 44);
+}
+
+#image-preview {
+  display: block;
+  float: right;
+  height: 800px;
+  width: 800px;
+  right: 0;
+  margin-right: 50px;
+  border-radius: 50px;
+  box-shadow: 0px 5px 20px rgb(71, 71, 71);
+}
+
+#recipe-information-container {
+  width: 500px;
+  border-radius: 25px;
+  box-shadow: 0px 5px 20px rgb(71, 71, 71);
+  padding: 20px;
+  margin-left: 20px;
+}
+
+#ingredients-container {
+  width: 500px;
+  border-radius: 25px;
+  box-shadow: 0px 5px 20px rgb(71, 71, 71);
+  padding: 20px;
+  margin: 20px 20px;
+}
+
+#allergens-container {
+  width: 500px;
+  border-radius: 25px;
+  box-shadow: 0px 5px 20px rgb(71, 71, 71);
+  padding: 20px;
+  margin: 20px 20px;
+}
+
+#nutritionFacts-container {
+  width: 500px;
+  border-radius: 25px;
+  box-shadow: 0px 5px 20px rgb(71, 71, 71);
+  padding: 20px;
+  margin: 20px 20px;
+}
+
+#time-container {
+  width: 500px;
+  border-radius: 25px;
+  box-shadow: 0px 5px 20px rgb(71, 71, 71);
+  padding: 20px;
+  margin: 20px 20px;
+}
+
+.background-recipe-cards {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(238, 238, 238, 1) 100%
+  );
 }

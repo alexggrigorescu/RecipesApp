@@ -18,7 +18,6 @@ export default function Landing({ showDetails }) {
   return (
     <>
       <HList recipes={recipes} />
-
       <RecipeDetails />
     </>
   );

@@ -16,12 +16,13 @@ const breakPoints = [
 
 export default function HList({ recipes }) {
   return (
-    <>
-      <Carousel breakPoints={breakPoints} itemPosition={consts.CENTER}>
+    <div id="carousel-container">
+      <h1 id="title-text">Recipes...</h1>
+      <Carousel breakPoints={breakPoints}>
         {recipes.map((recipe, index) => (
           <Card
             id={index}
-            key={recipe.recipe.label}
+            key={index}
             title={recipe.recipe.label}
             calories={recipe.recipe.calories}
             image={recipe.recipe.image}
@@ -30,6 +31,6 @@ export default function HList({ recipes }) {
           />
         ))}
       </Carousel>
-    </>
+    </div>
   );
 }
