@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.css";
 
-import Carousel, { consts } from "react-elastic-carousel";
+import Carousel from "react-elastic-carousel";
 
 import Card from "../Card";
 

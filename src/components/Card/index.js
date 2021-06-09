@@ -6,23 +6,30 @@ import Button from "../Button";
 import { useDetails } from "../../contexts/DetailsContext";
 
 export default function Card({ id, title, image, ingredients, ...recipe }) {
-  const [showDetails, setShowDetails] = useState(true);
+  const [showDetails, setShowDetails] = useState(false);
 
   const { setRecipe } = useDetails();
 
   const onClick = () => {
-    setRecipe(recipe);
-
-    setTimeout(
-      () =>
-        window.scrollBy({
-          top: 900,
-          left: 0,
-          behavior: "smooth",
-        }),
-      200
-    );
+    showDetails ? setShowDetails(false) : setShowDetails(true);
   };
+
+  useEffect(() => {
+    if (showDetails) {
+      setRecipe(recipe);
+      setTimeout(
+        () =>
+          window.scrollBy({
+            top: 800,
+            left: 0,
+            behavior: "smooth",
+          }),
+        200
+      );
+    } else {
+      setRecipe("");
+    }
+  }, [showDetails]);
 
   return (
     <div className="card-wrapper">
