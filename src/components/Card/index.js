@@ -27,7 +27,7 @@ export default function Card({ id, title, image, ingredients, ...recipe }) {
   return (
     <div className="card-wrapper">
       <img className="preview-image" src={image} alt="Recipe Preview" />
-      <h4>{title}</h4>
+      <h4 id="carousel-card-title">{title}</h4>
       <hr />
       <ul className="body-text">
         {ingredients.map((ingredient, index) => (
