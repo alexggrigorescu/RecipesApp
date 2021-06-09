@@ -3,16 +3,16 @@ import "./styles.css";
 
 import Button from "../Button";
 
-export default function Card({ title, image, ingredients }) {
-  const [showDetails, setShowDetails] = useState(false);
+import { useDetails } from "../../contexts/DetailsContext";
+
+export default function Card({ id, title, image, ingredients, ...recipe }) {
+  const [showDetails, setShowDetails] = useState(true);
+
+  const { setRecipe } = useDetails();
 
   const onClick = () => {
-    showDetails ? setShowDetails(false) : setShowDetails(true);
+    showDetails ? setRecipe(recipe) : setShowDetails(true);
   };
-
-  useEffect(() => {
-    console.log(`onClick called ${showDetails}`);
-  }, [showDetails]);
 
   return (
     <div className="card-wrapper">

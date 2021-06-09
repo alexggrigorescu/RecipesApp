@@ -18,8 +18,9 @@ export default function HList({ recipes }) {
   return (
     <>
       <Carousel breakPoints={breakPoints} itemPosition={consts.CENTER}>
-        {recipes.map((recipe) => (
+        {recipes.map((recipe, index) => (
           <Card
+            id={index}
             key={recipe.recipe.label}
             title={recipe.recipe.label}
             calories={recipe.recipe.calories}

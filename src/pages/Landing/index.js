@@ -5,6 +5,7 @@ import HList from "../../components/Hlist";
 import RecipeDetails from "../../components/RecipeDetails";
 
 import { useCarousel } from "../../contexts/CarouselContext";
+import { useDetails } from "../../contexts/DetailsContext";
 
 export default function Landing({ showDetails }) {
   const { recipes, getRecipes } = useCarousel();
@@ -17,6 +18,7 @@ export default function Landing({ showDetails }) {
   return (
     <>
       <HList recipes={recipes} />
+
       <RecipeDetails />
     </>
   );
